@@ -144,3 +144,5 @@ li {
                 <!-- close sideBarLeft -->
                 <div id="contentCenter">
                     <div id="contentCenterPadding">
+
+					<!--test to access file in a subfolder-->
