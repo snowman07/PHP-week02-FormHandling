@@ -25,26 +25,27 @@
   </head>
   <body>
     <div class="container">
-      <h1>Bootstrap Forms</h1>
-      <form name="myform" method="post" action="#">
+      <h1>Madlib</h1>
+      <form name="myform" method="post" action="madlib.php">
         <div class="form-group">
-          <label for="username">Name</label>
+          <label for="firstname">First Name</label>
           <input
             type="text"
             class="form-control"
             name="username"
-            placeholder="Enter username here"
+            placeholder="Enter firstname here"
           />
         </div>
         <div class="form-group">
-          <label for="password">Password</label>
+          <label for="lastname">Last Name</label>
           <input
-            type="password"
+            type="text"
             class="form-control"
-            name="password"
-            placeholder="Enter password here"
+            name="username"
+            placeholder="Enter lastname here"
           />
         </div>
+        
         <div class="form-group">
           <label for="gender">Gender</label>
           <!--<div class="form-check">
@@ -61,6 +62,7 @@
             class="custom-control-label"
             name="gender"
             value="Male"
+            checked
           />
           Female:
           <input
@@ -70,42 +72,32 @@
             value="Female"
           />
         </div>
-        <!--<div class="form-check">
-          <input class="form-check-input" type="checkbox" name="newsletter" />
-          <label class="form-check-label" for="newsletter"> Newsletter </label>
-        </div>-->
+    
         <div class="form-group">
-          <label for="country">Newsletter</label>
-          <input
-            type="checkbox"
-            class="custom-control-label"
-            name="newsletter"
-            value="newsletter"
-          />
-        </div>
-        <div class="form-group">
-          <label for="country">Country</label>
-          <select class="form-control" name="country">
-            <option value="">Select country...</option>
+          <label for="color">Favorite Color</label>
+          <select class="form-control" name="color">
+            <option value="">Select color...</option>
             <!--this serve as the placeholder-->
-            <option value="CA">Canada</option>
-            <option value="UK">United Kingdom</option>
-            <option value="NZ">New Zealand</option>
-            <option value="US">U.S.A.</option>
+            <option>blue</option>
+            <option>red</option>
+            <option>aquamarine</option>
+            <option >teal</option>
+            <option >salmon</option>
+            <option >jungle pink</option>
           </select>
         </div>
         <div class="form-group">
-          <label for="comments">Comments</label>
-          <textarea class="form-control" name="comments" rows="3"></textarea>
-        </div>
-        <div class="form-group">
-          <label for="age">Age</label>
-          <input
-            type="number"
-            class="form-control"
-            name="age"
-            placeholder="Enter age here"
-          />
+          <label for="garment">Garment</label>
+          <select class="form-control" name="garment">
+            <option value="">Select garment...</option>
+            <!--this serve as the placeholder-->
+            <option>thong monokini</option>
+            <option>comfortable but ragged hipster sweater</option>
+            <option>gap sprint catalog vest</option>
+            <option >pair of Value Village special plaid pants</option>
+            <option >pair of hand-me-down overalls</option>
+            <option >pair of fisherman's wader</option>
+          </select>
         </div>
 
         <button type="submit" name="mysubmit" class="btn btn-primary mb-2">
