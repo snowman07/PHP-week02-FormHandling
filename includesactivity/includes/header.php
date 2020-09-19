@@ -1,7 +1,40 @@
+<?php
+
+$thisFile = basename($_SERVER['PHP_SELF']); 
+//echo $thisFile; //just for testing ... remove this later
+
+switch ($thisFile){
+	case "index.php":
+		$thisPageTitle = "Edgar Allen Poe";
+		$thisSideBarFile = "includes/summaries/home.html"; // make sure you check your pathing; change file type and formatting if you like.
+		break;
+	case "berenice.php":
+		$thisPageTitle = "EAPoe - Berenice";
+		$thisSideBarFile = "includes/summaries/berenice.html";
+		break;
+	case "amontillado.php":
+		$thisPageTitle = "Cask of Amontillado";
+		$thisSideBarFile = "includes/summaries/amontillado.html";
+		break;	
+	case "maelstrom.php":
+		$thisPageTitle = "Descent into the Maelstrom";
+		$thisSideBarFile = "includes/summaries/maelstrom.html";
+		break;
+	case "angel.php":
+		$thisPageTitle = "The Angel of the Odd";
+		$thisSideBarFile = "includes/summaries/angel.html";
+		break;
+}
+
+?>
+
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html>
     <head>
-        <title>Title</title>
+        <title>
+			<?php echo $thisPageTitle; ?>
+		</title>
         <style type="text/css">
 
 html,body {
@@ -122,22 +155,24 @@ li {
                 </div>
                 <!-- close masthead -->
                 <div id="topNav">
-                    <a href="#">Home</a>
+                    <a href="index.php">Home</a>
                     |
-                    <a href="#">Berenice</a>
+                    <a href="berenice.php">Berenice</a>
                     |
-                    <a href="#">The Cask of Amontillado</a>
+                    <a href="amontillado.php">The Cask of Amontillado</a>
                     |
-                    <a href="#">Descent into the Maelstrom</a>
+                    <a href="maelstrom.php">Descent into the Maelstrom</a>
                     |
-                    <a href="#">The Angel of the Odd</a>
+                    <a href="angel.php">The Angel of the Odd</a>
                     |
                 </div>
                 <!-- close topNav -->
                 <div id="sideBarLeft">
                     <div id="sideBarLeftPadding">
                         <h2>Summary</h2>
-                        sidebar content goes here
+						
+						<?php include($thisSideBarFile);?>
+
                     </div>
                     <!-- close sideBarLeftPadding -->
                 </div>
