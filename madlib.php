@@ -21,6 +21,11 @@
       form {
         max-width: 450px;
       }
+      .storycontainer {
+        //max-width: 450px;
+        background-color: lightgray;
+        border: solid 5px blue;
+      }
     </style>
   </head>
   <body>
@@ -32,7 +37,7 @@
           <input
             type="text"
             class="form-control"
-            name="username"
+            name="firstname"
             placeholder="Enter firstname here"
           />
         </div>
@@ -41,7 +46,7 @@
           <input
             type="text"
             class="form-control"
-            name="username"
+            name="lastname"
             placeholder="Enter lastname here"
           />
         </div>
@@ -61,16 +66,51 @@
             type="radio"
             class="custom-control-label"
             name="gender"
-            value="Male"
+            value="guy"
             checked
-          />
+          /> <!--"value" attribute will be shown in the browser-->
           Female:
           <input
             type="radio"
             class="custom-control-label"
             name="gender"
-            value="Female"
+            value="girl"
           />
+        </div>
+
+        <div class="form-group">
+          <label for="work">Work</label>
+          <input
+            type="text"
+            class="form-control"
+            name="work"
+            placeholder="What is your work?"
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="place">Place</label>
+          <select class="form-control" name="place">
+            <!--<option value="">Select color...</option>-->
+            <!--this serve as the placeholder-->
+            <option>school</option>
+            <option>park</option>
+            <option>mall</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="day">Today is:</label>
+          <select class="form-control" name="day">
+            <!--<option value="">Select color...</option>-->
+            <!--this serve as the placeholder-->
+            <option>Monday</option>
+            <option>Tuesday</option>
+            <option>Wednesday</option>
+            <option >Thursday</option>
+            <option >Saturday</option>
+            <option >Sunday</option>
+          </select>
         </div>
     
         <div class="form-group">
@@ -82,8 +122,8 @@
             <option>red</option>
             <option>aquamarine</option>
             <option >teal</option>
-            <option >salmon</option>
-            <option >jungle pink</option>
+            <option >yellow</option>
+            <option >pink</option>
           </select>
         </div>
         <div class="form-group">
@@ -104,6 +144,58 @@
           Submit
         </button>
       </form>
+
+      <?php
+      // Step 1 in any app... grab the user data from the form elements, set variables, and TEST them.
+      $firstName = $_POST['firstname'];
+      $lastName = $_POST['lastname'];
+      $gender = $_POST['gender'];
+      $work = $_POST['work'];
+      $place = $_POST['place'];
+      $day = $_POST['day'];
+      $color = $_POST['color'];
+      $garment = $_POST['garment'];
+
+      //echo "$firstName, $lastName, $gender, $color, $garment";
+      
+      if ($gender == "guy"){ // "guy" is the "value" attribute in HTML
+        $preference = "girl";
+      } else {
+        $preference = "guy";
+      }
+
+      if ($gender == "guy") {
+        $pronoun = "he";
+
+      } else {
+        $pronoun = "she";
+      }
+
+      // Lets create a condition where we only process this IF the user has tick the submit button
+      if(isset($_POST['mysubmit'])) {
+          //echo "SUBMITTED"; //just for testing
+        // END of if submit
+
+        echo "<div class=\"storycontainer\">";
+
+          $story = "<br><br>\n<p>There was a $gender named $firstName $lastName. One $day morning, $firstName was in $place and about wearing a $color $garment.</p>";
+
+          $story .= "<p>Then, $firstName saw a cute $preference walking by. \"Hey cutie! May I get your contact number?\", said $firstName. </p>";
+
+          $story .= "<p>The $preference give the number to $firstName. After that, they start talking comfortably. The $preference said that $color is the lucky color of the day. $firstName laughs so hard and the conversation continues. </p>";
+
+          $story .= "<p>That night, $firstName texted the $preference and decided to meet again. Both agreed to meet at $place to get to know more each other. </p>";
+
+          $story .= "<p>The $preference ask $firstName what $pronoun does for a living. $firstName said that $pronoun is a $work. The $preference said that being a $work is a good profession.</p>";
+          
+          $story .= "<p>To make the long story short, this $preference and $firstName ended up with each other and there love continues to grow.</p><br><br>";
+
+          echo $story;
+
+        echo "</div>";
+      }
+
+      ?>
     </div>
     <!--end of container class-->
 
