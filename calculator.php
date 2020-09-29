@@ -51,13 +51,13 @@ Description: This is a Calculator form in PHP file. User need to input Num 1, op
         Num 1: <input type="number" name="num1" value="<?php echo $num1?>"> <!--"value" attrib is use to prepopulate the form-->
         <select name="operator">
 
-        <?php
-        // quick and dirty way to retain the value of operator "input" (prepopulate the form of the name="operator")
-        // not perfect as it is simply adds one option to the top, but better than losing the users last operation
-        if($operator){
-            echo "\n\t<option>$operator</option>"; 
-        }
-        ?>
+            <?php
+            // quick and dirty way to retain the value of operator "input" (prepopulate the form of the name="operator")
+            // not perfect as it is simply adds one option to the top, but better than losing the users last operation
+                if($operator){
+                    echo "\n\t<option>$operator</option>"; 
+                }
+            ?>
 
             <!--<option value="add">+</option>-->
             <option>+</option>
