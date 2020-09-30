@@ -6,12 +6,7 @@ Course: DMIT 2025 PHP/MySQL
 Description: This is a Calculator form in PHP file. User need to input Num 1, operation(+,-,*,/), and Num 2. Result will show below the form. Value of the inputs will retain in the browser (prepopulate the form) 
 -->
 
-<<<<<<< HEAD
-
-<!--Submoduel Test!!! Update done on parent repo. What will happen to main repo (standalone repo)???-->
-=======
 <!--Submodule testing!!! this is to check if parent/master repo be affected if there's an update in this repo-->  
->>>>>>> fe324ec47a326166744c7d0b21fd15199e110082
 
 
 <!--This is an update on SUBMODULE (meaning, a repo within the master repo)-->
