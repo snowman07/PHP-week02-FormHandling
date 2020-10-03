@@ -14,8 +14,8 @@
         <title>Bootstrap Forms</title>
         <!--reducing the width of the form on desktop-->
         <style type="text/css">
-            form {
-                max-width: 450px;
+            .container {
+                max-width: 650px;
             }
         </style>
     </head>
@@ -35,6 +35,7 @@
                     >
                 </div>
                 <!--end of Name-->
+                <br>
                 <!--start of Password-->
                 <div class="form-group">
                     <label for="password">Password</label>
@@ -46,18 +47,19 @@
                     >
                 </div>
                 <!--end of Password-->
+                <br>
                 <!--start of Gender-->
                 <div class="form-group">
                     <label for="gender">Gender</label>
-                    <!--<div class="form-check">
-                        <input class="form-check-input" type="radio" name="gender" />
-                        <label class="form-check-label" for="gender"> Male </label>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="gender">
+                        <label class="form-check-label" for="gender"> Male</label>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input" type="radio" name="gender" />
-                        <label class="form-check-label" for="gender"> Female </label>
-                    </div>-->
-                    Male:
+                        <input class="form-check-input" type="radio" name="gender">
+                        <label class="form-check-label" for="gender"> Female</label>
+                    </div>
+                    <!--Male:
                     <input
                         type="radio"
                         class="custom-control-label"
@@ -70,9 +72,10 @@
                         class="custom-control-label"
                         name="gender"
                         value="Female"
-                    >
+                    >-->
                 </div>
                 <!--end of Gender-->
+                <br>
                 <!--start of Newsletter-->
                 <div class="form-check">
                     <input class="form-check-input" type="checkbox" name="newsletter">
@@ -88,6 +91,8 @@
                     >
                 </div>-->
                 <!--end of Newsletter-->
+                <br>
+                <!--start of Country-->
                 <div class="form-group">
                     <label for="country">Country</label>
                     <select class="form-control" name="country">
@@ -99,10 +104,16 @@
                         <option value="US">U.S.A.</option>
                     </select>
                 </div>
+                <!--end of Country-->
+                <br>
+                <!--start of Comments-->
                 <div class="form-group">
                     <label for="comments">Comments</label>
                     <textarea class="form-control" name="comments" rows="3"></textarea>
                 </div>
+                <!--end of Comments-->
+                <br>
+                <!--start of Age-->
                 <div class="form-group">
                     <label for="age">Age</label>
                     <input
@@ -112,6 +123,7 @@
                         placeholder="Enter age here"
                     >
                 </div>
+                <!--end of Age-->
                 <div>&nbsp;</div>
                 <!-- space before button -->
                 <button type="submit" name="mysubmit" class="btn btn-primary mb-2">
