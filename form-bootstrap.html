@@ -22,7 +22,9 @@
     <body>
         <div class="container">
             <h1>Bootstrap Forms</h1>
+            <!--start of form-->
             <form name="myform" method="post" action="#">
+                <!--start of Name-->
                 <div class="form-group">
                     <label for="username">Name</label>
                     <input
@@ -32,6 +34,8 @@
                         placeholder="Enter username here"
                     >
                 </div>
+                <!--end of Name-->
+                <!--start of Password-->
                 <div class="form-group">
                     <label for="password">Password</label>
                     <input
@@ -41,6 +45,8 @@
                         placeholder="Enter password here"
                     >
                 </div>
+                <!--end of Password-->
+                <!--start of Gender-->
                 <div class="form-group">
                     <label for="gender">Gender</label>
                     <!--<div class="form-check">
@@ -66,19 +72,22 @@
                         value="Female"
                     >
                 </div>
-                <!--<div class="form-check">
-                <input class="form-check-input" type="checkbox" name="newsletter" />
-                <label class="form-check-label" for="newsletter"> Newsletter </label>
-                </div>-->
-                <div class="form-group">
-                    <label for="country">Newsletter</label>
+                <!--end of Gender-->
+                <!--start of Newsletter-->
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" name="newsletter">
+                    <label class="form-check-label" for="newsletter"> Newsletter</label>
+                </div>
+                <!--<div class="form-group">
+                    <label for="newsletter">Newsletter</label>
                     <input
                         type="checkbox"
                         class="custom-control-label"
                         name="newsletter"
                         value="newsletter"
                     >
-                </div>
+                </div>-->
+                <!--end of Newsletter-->
                 <div class="form-group">
                     <label for="country">Country</label>
                     <select class="form-control" name="country">
@@ -109,6 +118,7 @@
                     Submit
                 </button>
             </form>
+            <!--end of form-->
         </div>
         <!--end of container class-->
         <!-- Optional JavaScript -->
